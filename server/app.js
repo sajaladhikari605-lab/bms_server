@@ -10,8 +10,6 @@ dns.setServers(["1.1.1.1", "8.8.8.8"]);
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-
-
 // MongoDB connection
 const dbURI = "mongodb+srv://sajaladhikari605_db_user:pYtCselqoUivVg6W@cluster0.gtpsvge.mongodb.net/?appName=Cluster0";
 
