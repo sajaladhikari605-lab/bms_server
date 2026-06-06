@@ -2,9 +2,21 @@ const express = require('express');
 const app = express();
 const mongoose = require('mongoose');
 const dns = require('dns');
+const cors = require("cors")
 
 // DNS servers
 dns.setServers(["1.1.1.1", "8.8.8.8"]);
+
+
+
+// CORS configuration
+app.use(cors({
+    origin: "http://localhost:5173", // Allow requests from this origin
+    optionsSuccessStatus: 200 // For legacy browser support
+}))
+
+
+
 
 // Middleware
 app.use(express.json());
@@ -24,7 +36,7 @@ async function connectToDatabase() {
 
 connectToDatabase();
 
-const blogRoute = require("./routes/blogroute") 
+const blogRoute = require("./routes/blogRoutes") 
 app.use("/",blogRoute)
 
 
