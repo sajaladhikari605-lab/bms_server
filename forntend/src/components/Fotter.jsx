@@ -5,7 +5,7 @@ const Footer = () => {
                 <div className="footer-content">
                     <h2>BMS</h2>
                     <p>
-                        Blog Management System © 2026
+                        Blog Management Made by Sajal Adhikari All rights reserved © 2026
                     </p>
                 </div>
             </footer>
