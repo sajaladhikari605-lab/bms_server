@@ -23,7 +23,7 @@ const Create = () => {
         e.preventDefault() // prevent the default form submission behavior
 
         try {
-            const response = await axios.post("http://localhost:3000/blogs", blog)
+            const response = await axios.post("https://bms-server-3.onrender.com/blogs", blog)
 
             if (response.status === 201) {
                 alert("Blog created successfully")

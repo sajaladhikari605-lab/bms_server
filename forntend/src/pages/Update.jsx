@@ -11,7 +11,7 @@ const Update = () => {
     const [blog, setBlog] = useState({})
 
     const fetchSingleBlog = async () => {
-        const response = await axios.get(`http://localhost:3000/blogs/${id}`)
+        const response = await axios.get(`https://bms-server-3.onrender.com/blogs/${id}`)
         setBlog(response.data.data)
     }
 
@@ -30,7 +30,7 @@ const Update = () => {
     const handleSubmit = async (e) => {
         e.preventDefault() // prevent the default form submission behavior
 
-        const response = await axios.patch(`http://localhost:3000/blogs/${id}`, blog)
+        const response = await axios.patch(`https://bms-server-3.onrender.com/blogs/${id}`, blog)
 
         if (response.status === 200) {
             alert("Blog updated successfully")

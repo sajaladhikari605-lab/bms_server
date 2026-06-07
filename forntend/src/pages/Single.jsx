@@ -8,7 +8,7 @@ const Single = () => {
     const [blog, setBlog] = useState({})
 
     const fetchSingleBlog = async ()=>{
-       const response = await axios.get(`http://localhost:3000/blogs/${id}`)
+       const response = await axios.get(`https://bms-server-3.onrender.com/blogs/${id}`)
        setBlog(response.data.data)
     }
     
@@ -17,7 +17,7 @@ const Single = () => {
     }, [])
 
     const handleDelete = async ()=>{
-        await axios.delete(`http://localhost:3000/blogs/${id}`)
+        await axios.delete(`https://bms-server-3.onrender.com/blogs/${id}`)
         // redirect to home page after deletion
         redirect("/")
     }
