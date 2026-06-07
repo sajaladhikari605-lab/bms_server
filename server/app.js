@@ -11,7 +11,7 @@ dns.setServers(["1.1.1.1", "8.8.8.8"]);
 
 // CORS configuration
 app.use(cors({
-    origin: "https://bms-server-six.vercel.app", // Allow requests from this origin
+    origin: "https://sajalbmsproject.vercel.app", // Allow requests from this origin
     optionsSuccessStatus: 200 // For legacy browser support
 }))
 
